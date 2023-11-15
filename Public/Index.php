@@ -3,6 +3,8 @@
 //require_once "../App/Controllers/WelcomeController.php";
 require_once "../autoload.php";
 require_once "../App/Helpers/ViewHelper.php";
+require_once "../Config/env.php";
+require_once "../routes.php";
 
 if (isset($_GET['class']) && !empty($_GET['class'])) {
     $className = $_GET['class'];

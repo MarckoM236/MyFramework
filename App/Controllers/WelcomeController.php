@@ -2,8 +2,10 @@
 
 namespace App\Controllers;
 
-class WelcomeController extends Controller{
+use \App\Models\User;
 
+class WelcomeController extends Controller{
+    
     public function __construct() {}
 
     public function index(){
@@ -15,9 +17,15 @@ class WelcomeController extends Controller{
         $this->view('Layouts/_template',['title'=>$title,'name'=>$nombre]);
     }
 
-    public function create(){
+    public function create($id=null){
         $name = $_POST['nombre'];
-        $this->view('Layouts/_template',['name'=>$name]);
+        $this->view('Layouts/_template',['name'=>$name,'id'=>$id]);
+    }
+
+    public function query(){
+        $user = new User();
+        $sql = "select * from empleados";
+        $this->view('Layouts/_template',$user->getData($sql));
     }
 
     
