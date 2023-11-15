@@ -9,9 +9,9 @@ Cambiar nombre del archivo .env.Example a .env
 
 Configurar la base de datos en el archivo .env
 DB_HOST=localhost
-DB_USER=root
-DB_PASS=
-DB_NAME=planta
+DB_USER= xxxxxx
+DB_PASS= xxxxxx
+DB_NAME= xxxxxx
 
 # Modo de uso
 * La ruta principal sera dominio/Public
